@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/home">
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.codechallenge.view.HomeFragment"
+        android:label="@string/booklist" >
+        <action
+            android:id="@+id/action_home_to_deleteBookBottomSheetFragment"
+            app:destination="@id/deleteBookBottomSheetFragment" />
+        <action
+            android:id="@+id/action_home_to_editBookBottomSheetFragment"
+            app:destination="@id/editBookBottomSheetFragment" />
+        <action
+            android:id="@+id/action_home_to_addBookBottomSheetFragment"
+            app:destination="@id/addBookBottomSheetFragment" />
+        <action
+            android:id="@+id/action_home_to_bookDetailsBottomSheetFragment"
+            app:destination="@id/bookDetailsBottomSheetFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/search"
+        android:name="com.example.codechallenge.view.SearchFragment"
+        android:label="@string/search" >
+        <action
+            android:id="@+id/action_search_to_searchResultFragment"
+            app:destination="@id/searchResultFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchResultFragment"
+        android:name="com.example.codechallenge.view.SearchResultFragment"
+        android:label="SearchResultFragment" >
+        <action
+            android:id="@+id/action_searchResultFragment_to_bookDetailsBottomSheetFragment"
+            app:destination="@id/bookDetailsBottomSheetFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/deleteBookBottomSheetFragment"
+        android:name="com.example.codechallenge.view.DeleteBookBottomSheetFragment"
+        android:label="DeleteBookBottomSheetFragment" >
+        <action
+            android:id="@+id/action_deleteBookBottomSheetFragment_to_home"
+            app:destination="@id/home" />
+    </dialog>
+    <dialog
+        android:id="@+id/editBookBottomSheetFragment"
+        android:name="com.example.codechallenge.view.EditBookBottomSheetFragment"
+        android:label="EditBookBottomSheetFragment" >
+        <action
+            android:id="@+id/action_editBookBottomSheetFragment_to_home"
+            app:destination="@id/home" />
+    </dialog>
+    <dialog
+        android:id="@+id/addBookBottomSheetFragment"
+        android:name="com.example.codechallenge.view.AddBookBottomSheetFragment"
+        android:label="AddBookBottomSheetFragment" >
+        <action
+            android:id="@+id/action_addBookBottomSheetFragment_to_home"
+            app:destination="@id/home" />
+    </dialog>
+    <dialog
+        android:id="@+id/bookDetailsBottomSheetFragment"
+        android:name="com.example.codechallenge.view.BookDetailsBottomSheetFragment"
+        android:label="BookDetailsBottomSheetFragment" />
+
+</navigation>

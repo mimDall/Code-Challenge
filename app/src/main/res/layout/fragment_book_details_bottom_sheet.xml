@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tr_details_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="24dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/img_bg"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/oval_bg"
+        android:backgroundTint="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/details_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <TextView
+            android:id="@+id/img_letter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@android:color/white"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Z" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/details_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/serach_edt_bg"
+        android:drawablePadding="8dp"
+        android:focusable="true"
+        android:enabled="false"
+        android:inputType="textMultiLine"
+        android:focusableInTouchMode="true"
+        android:hint="@string/hint_title"
+        android:padding="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/details_author"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_bg" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/details_author"
+        android:layout_width="0dp"
+        android:inputType="textMultiLine"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/serach_edt_bg"
+        android:drawablePadding="8dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/hint_author"
+        android:enabled="false"
+        android:padding="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/details_genre"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_title" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/details_genre"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/serach_edt_bg"
+        android:drawablePadding="8dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/hint_genre"
+        android:padding="12dp"
+        android:enabled="false"
+        android:inputType="textMultiLine"
+        app:layout_constraintBottom_toTopOf="@+id/details_yearPublished"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_author" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/details_yearPublished"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/serach_edt_bg"
+        android:drawablePadding="8dp"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:hint="@string/hint_yearPublished"
+        android:padding="12dp"
+        android:inputType="number"
+        android:enabled="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_genre" />
+
+    <CheckBox
+        android:id="@+id/details_checked_out"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:checked="false"
+        android:enabled="false"
+        app:layout_constraintEnd_toStartOf="@+id/textView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/details_yearPublished" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/check_out"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/details_checked_out"
+        app:layout_constraintStart_toEndOf="@+id/details_checked_out"
+        app:layout_constraintTop_toTopOf="@+id/details_checked_out" />
+
+    <ProgressBar
+        android:id="@+id/pb_book_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

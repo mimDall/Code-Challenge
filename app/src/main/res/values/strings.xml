@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Code Challenge</string>
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="booklist">Books list</string>
+    <string name="search_in_books">search book</string>
+    <string name="hint_title">title</string>
+    <string name="hint_author">author</string>
+    <string name="hint_genre">genre</string>
+    <string name="hint_yearPublished">yearPublished</string>
+    <string name="check_out">check out</string>
+    <string name="update_book">Update Book</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete_this_book">Are you sure to delete this book?</string>
+    <string name="sure_delete">Yes, I\'m sure.</string>
+    <string name="no">No</string>
+    <string name="add_book">Add Book</string>
+</resources>
